@@ -1,8 +1,9 @@
-const countries = document.querySelector('.countries');
-// const search = document.querySelector('fa-search').addEventListener
-// ('click', getCountry);
+let countries = document.querySelector('.countries');
 let mode = document.querySelector('.fa-sun-o');
-const toggle = document.getElementById('mode');
+let toggle = document.getElementById('mode');
+const getData = function(){
+    
+}
 
 // Toggle Dark-Mode ---------------
 
@@ -50,12 +51,13 @@ function getValue(){
     fetch('https://restcountries.com/v3.1/all')
     .then((res) => res.json())
     .then((data) =>{
-        let value = document.getElementById("regions").value;
+        let region = document.getElementById("regions");
+        const dataValue = region.value;
         let output = ''
         const filteredRegion = data.filter((country) => {
-           if(country.region === value)
-           return true
-        });
+                                if(country.region === dataValue)
+                                return true
+                                });
         filteredRegion.forEach(function(country){
             let flag = country.cca2.toLowerCase()
             output += `
@@ -71,7 +73,7 @@ function getValue(){
             ` 
         });
             countries.innerHTML = output;
-    })
+       })
     .catch((err) => console.log(err))}
 
 

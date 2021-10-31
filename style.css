@@ -167,7 +167,13 @@ a{
     border: none;
     background:none;
     box-shadow: none;
+    font-size: 14px;
 }
+
+#mode-text{
+    margin-left: .5em;
+}
+
 
 
 @media (max-width:620px){
