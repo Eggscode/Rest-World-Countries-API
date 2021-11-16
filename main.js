@@ -1,9 +1,6 @@
 let countries = document.querySelector('.countries');
 let mode = document.querySelector('.fa-sun-o');
 let toggle = document.getElementById('mode');
-const getData = function(){
-    
-}
 
 // Toggle Dark-Mode ---------------
 
@@ -39,8 +36,7 @@ function getCountries(){
             </div>
             ` 
         });
-            countries.innerHTML = output 
-  
+            countries.innerHTML = output
     })
     .catch((err) => console.log(err))
 }
@@ -56,8 +52,7 @@ function getValue(){
         let output = ''
         const filteredRegion = data.filter((country) => {
                                 if(country.region === dataValue)
-                                return true
-                                });
+                                return true });
         filteredRegion.forEach(function(country){
             let flag = country.cca2.toLowerCase()
             output += `
@@ -74,9 +69,11 @@ function getValue(){
         });
             countries.innerHTML = output;
        })
-    .catch((err) => console.log(err))}
+    .catch((err) => console.log(err)
+    )}
 
 
+    
 
    
 // function getCountry(){

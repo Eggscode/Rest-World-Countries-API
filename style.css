@@ -175,6 +175,18 @@ a{
 }
 
 
+@media (max-width:1050px){
+    .countries{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:860px){
+    .countries{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media (max-width:620px){
     .nav, .prev, .details{
